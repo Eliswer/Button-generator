@@ -1,0 +1,15 @@
+:root {
+  --orange: #f1404b;
+  --bg-white: #f4f5f9;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #dddfe6;
+}
