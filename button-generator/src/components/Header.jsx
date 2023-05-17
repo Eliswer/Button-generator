@@ -1,7 +1,7 @@
 function Header(icon, title) {
   return (
     <div className="header">
-      <img src="" alt="icon"></img>
+      <img src={icon} alt="icon"></img>
       <h1>{title}</h1>
     </div>
   );

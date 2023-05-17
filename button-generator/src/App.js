@@ -2,10 +2,6 @@ import { useState } from "react";
 
 import "./styles/app.css";
 
-import drawing from "./icons/Drawing.svg";
-import preview from "./icons/Preview.svg";
-import sourceCode from "./icons/Source-code.svg";
-
 import Header from "./components/Header";
 import Settings from "./components/Settings";
 import ButtonPreview from "./components/ButtonPreview";
@@ -36,7 +32,6 @@ function App() {
   return (
     <div className="app">
       <div className="btn-prev">
-        <Header icon={preview} title={"Button preview"} />
         <ButtonPreview />
         <button onClick={showCode}>Show Code</button>
         <button onClick={showSettings}>Show Settings</button>
