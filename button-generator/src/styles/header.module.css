@@ -1,0 +1,15 @@
+.header {
+  height: 6vh;
+  background-color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title {
+  display: inline;
+}
+
+.icon {
+  margin: 0 10px;
+}

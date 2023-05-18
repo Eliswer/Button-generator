@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import "./styles/app.css";
 
-import Header from "./components/Header";
 import Settings from "./components/Settings";
 import ButtonPreview from "./components/ButtonPreview";
 import CodeToCopy from "./components/CodeToCopy";
@@ -33,8 +32,10 @@ function App() {
     <div className="app">
       <div className="btn-prev">
         <ButtonPreview />
-        <button onClick={showCode}>Show Code</button>
-        <button onClick={showSettings}>Show Settings</button>
+        <div className="btns-wrapper">
+          <button onClick={showCode}>Show Code</button>
+          <button onClick={showSettings}>Show Settings</button>
+        </div>
       </div>
       <div className="bottom-wrapper">
         {bottomComponent.showCode ? <CodeToCopy /> : ""}

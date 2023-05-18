@@ -1,0 +1,17 @@
+.bg-change-wrapper {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.bg-change-block {
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.paragraph {
+  display: inline;
+}
