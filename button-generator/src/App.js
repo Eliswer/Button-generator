@@ -7,6 +7,8 @@ import ButtonPreview from "./components/ButtonPreview";
 import CodeToCopy from "./components/CodeToCopy";
 
 function App() {
+  const [bg, setBG] = useState("#f4f5f9");
+
   const [bottomComponent, setShowBottomComponent] = useState({
     showCode: false,
     showSettings: true,
@@ -30,8 +32,8 @@ function App() {
 
   return (
     <div className="app">
-      <div className="btn-prev">
-        <ButtonPreview />
+      <div className="btn-prev" style={{ backgroundColor: bg }}>
+        <ButtonPreview bg={bg} setBG={setBG} />
         <div className="btns-wrapper">
           <button onClick={showCode}>Show Code</button>
           <button onClick={showSettings}>Show Settings</button>
