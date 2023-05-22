@@ -7,7 +7,7 @@ import ButtonPreview from "./components/ButtonPreview";
 import CodeToCopy from "./components/CodeToCopy";
 
 function App() {
-  const [bg, setBG] = useState("#f4f5f9");
+  const [bg, setBG] = useState("#DDDFE6");
 
   const [bottomComponent, setShowBottomComponent] = useState({
     showCode: false,

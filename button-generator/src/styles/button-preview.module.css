@@ -1,5 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .bg-change-wrapper {
   margin-top: 10px;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -14,4 +22,11 @@
 
 .paragraph {
   display: inline;
+}
+
+.main-btn {
+  width: 30%;
+  height: 7vh;
+  margin-top: 70px;
+  border-radius: 7px;
 }
