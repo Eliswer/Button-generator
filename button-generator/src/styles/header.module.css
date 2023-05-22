@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 5px #000000;
 }
 
 .title {
