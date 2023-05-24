@@ -6,7 +6,7 @@ function ButtonPreview({ bg, setBG }) {
   return (
     <div>
       <Header icon={preview} title={"Preview"} />
-      <div className={classes.wrapper}>
+      <div className={`button-preview-wrapper ${classes.wrapper}`}>
         <div className={classes["bg-change-wrapper"]}>
           <p className={classes.paragraph}>change BG:</p>
           <div
