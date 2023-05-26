@@ -24,12 +24,6 @@
   border-bottom: 1px solid black;
 }
 
-.line {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
 .colour-choice {
   height: 20px;
   width: 20px;
@@ -49,4 +43,10 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
 input[type="color"]::-webkit-color-swatch {
   border: none;
+}
+
+.input {
+  background-color: var(--orange);
+  border-radius: 4px;
+  width: 50%;
 }

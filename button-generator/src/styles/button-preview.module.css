@@ -30,3 +30,13 @@
   margin-top: 70px;
   border-radius: 7px;
 }
+
+.button-preview-wrapper {
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 425px) {
+  .bg-change-wrapper {
+    padding: 0 20vw;
+  }
+}

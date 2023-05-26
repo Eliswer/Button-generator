@@ -12,70 +12,84 @@ function BoxShadow() {
   return (
     <div className={classes.s4}>
       <Title title={"Box Shadow"} />
-      <div className={classes.line}>
+      <div className={"line"}>
         <p>Enable:</p>
-        <input type="checkbox" checked={isChecked} onChange={checkHandler} />
+        <div className={"line-flex"}>
+          <input type="checkbox" checked={isChecked} onChange={checkHandler} />
+        </div>
       </div>
       {isChecked ? (
         <div className={classes.enabled}>
-          <div className={classes.line}>
+          <div className={"line"}>
             <p>Type:</p>
-            <select name="cars" id="cars">
-              <option value="volvo">Outset</option>
-              <option value="saab">**</option>
-            </select>
+            <div className={"line-flex"}>
+              <select name="cars" id="cars">
+                <option value="volvo">Outset</option>
+                <option value="saab">**</option>
+              </select>
+            </div>
           </div>
-          <div className={classes.line}>
+          <div className={"line"}>
             <p>Colour:</p>
-            <input
-              type="color"
-              className={classes["colour-choice"]}
-              style={{ backgroundColor: "black" }}
-            ></input>
+            <div className={"line-flex"}>
+              <input
+                type="color"
+                className={classes["colour-choice"]}
+                value={"#f1404b"}
+              ></input>
+            </div>
           </div>
-          <div className={classes.line}>
+          <div className={"line"}>
             <p>Horizontal:</p>
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              className={classes.slider}
-              id="myRange"
-            />
+            <div className={"line-flex"}>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                className={classes.slider}
+                id="myRange"
+              />
+            </div>
           </div>
-          <div className={classes.line}>
+          <div className={"line"}>
             <p>Vertical:</p>
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              className={classes.slider}
-              id="myRange"
-            />
+            <div className={"line-flex"}>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                className={classes.slider}
+                id="myRange"
+              />
+            </div>
           </div>
-          <div className={classes.line}>
+          <div className={"line"}>
             <p>Blur:</p>
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              className={classes.slider}
-              id="myRange"
-            />
+            <div className={"line-flex"}>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                className={classes.slider}
+                id="myRange"
+              />
+            </div>
           </div>
-          <div className={classes.line}>
+          <div className={"line"}>
             <p>Spread:</p>
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              className={classes.slider}
-              id="myRange"
-            />
+            <div className={"line-flex"}>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                className={classes.slider}
+                id="myRange"
+              />
+            </div>
           </div>
         </div>
       ) : (

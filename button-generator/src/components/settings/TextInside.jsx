@@ -5,46 +5,54 @@ function TextInside() {
   return (
     <div className={classes.s2}>
       <Title title={"Text inside"} />
-      <div className={classes.line}>
+      <div className={"line"}>
         <p>Displayed text:</p>
-        <input type="text"></input>
+        <input type="text" className={classes.input}></input>
       </div>
-      <div className={classes.line}>
+      <div className={"line"}>
         <p>Font:</p>
-        <select name="cars" id="cars">
-          <option value="volvo">Itim</option>
-          <option value="saab">sans serif</option>
-        </select>
+        <div className={"line-flex"}>
+          <select name="cars" id="cars">
+            <option value="volvo">Itim</option>
+            <option value="saab">sans serif</option>
+          </select>
+        </div>
       </div>
-      <div className={classes.line}>
+      <div className={"line"}>
         <p className={classes["padding-header"]}>Size:</p>
-        <input
-          type="range"
-          min="1"
-          max="100"
-          value="50"
-          className={classes.slider}
-          id="myRange"
-        />
+        <div className={"line-flex"}>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            className={classes.slider}
+            id="myRange"
+          />
+        </div>
       </div>
-      <div className={classes.line}>
+      <div className={"line"}>
         <p className={classes["padding-header"]}>Weight:</p>
-        <input
-          type="range"
-          min="1"
-          max="100"
-          value="50"
-          className={classes.slider}
-          id="myRange"
-        />
+        <div className={"line-flex"}>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            className={classes.slider}
+            id="myRange"
+          />
+        </div>
       </div>
-      <div className={classes.line}>
+      <div className={"line"}>
         <p>Colour:</p>
-        <input
-          type="color"
-          className={classes["colour-choice"]}
-          style={{ backgroundColor: "black" }}
-        ></input>
+        <div className={"line-flex"}>
+          <input
+            type="color"
+            className={classes["colour-choice"]}
+            value={"#f1404b"}
+          ></input>
+        </div>
       </div>
     </div>
   );

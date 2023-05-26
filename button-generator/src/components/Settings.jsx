@@ -9,9 +9,9 @@ import BoxShadow from "./settings/BoxShadow";
 
 function Settings() {
   return (
-    <div className="settings-wrapper">
+    <div className={classes["settings-wrapper"]}>
       <Header icon={drawing} title={"Style your button"} />
-      <div className={`settings-container`}>
+      <div className={classes["settings-container"]}>
         <General />
         <TextInside />
         <Border />

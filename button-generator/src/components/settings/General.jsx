@@ -6,30 +6,32 @@ function General() {
     <>
       <div className={classes.s1}>
         <Title title={"General"} />
-        <div className={classes.line}>
+        <div className={"line"}>
           <p>CSS class name:</p>
-          <input type="text"></input>
+          <input type="text" className={classes.input}></input>
         </div>
-        <div className={classes.line}>
+        <div className={"line"}>
           <p>BG colour:</p>
-          <select name="cars" id="cars">
-            <option value="volvo">Solid</option>
-            <option value="saab">Gradient</option>
-          </select>
-          <input
-            type="color"
-            className={classes["colour-choice"]}
-            style={{ backgroundColor: "black" }}
-          ></input>
-          <input
-            type="color"
-            className={classes["colour-choice"]}
-            style={{ backgroundColor: "black" }}
-          ></input>
+          <div className={"line-flex"}>
+            <select name="cars" id="cars">
+              <option value="volvo">Solid</option>
+              <option value="saab">Gradient</option>
+            </select>
+            <input
+              type="color"
+              className={classes["colour-choice"]}
+              value={"#f1404b"}
+            ></input>
+            <input
+              type="color"
+              className={classes["colour-choice"]}
+              value={"#f1404b"}
+            ></input>
+          </div>
         </div>
         <div className={classes["extended-line"]}>
           <p>Padding:</p>
-          <div>
+          <div className={classes["extended-wrapper"]}>
             <div className={classes.padding}>
               <p className={classes["padding-header"]}>Top:</p>
               <input

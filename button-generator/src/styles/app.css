@@ -43,25 +43,25 @@ html {
   border-radius: 5px;
 }
 
-/* My stylings, outsource them later */
 .bottom-wrapper {
   height: 50%;
   overflow-y: scroll;
 }
 
-.settings-wrapper {
+select {
+  border-radius: 4px;
+  width: 80px;
+}
+
+.line {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
 }
 
-.header-wrapper {
-  position: fixed;
-}
-
-.settings-container {
-  margin-top: 40px;
-}
-
-.button-preview-wrapper {
-  margin-top: 40px;
+.line-flex {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
