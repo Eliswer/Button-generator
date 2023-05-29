@@ -1,5 +1,4 @@
 import Title from "../Title";
-import classes from "../../styles/settings/text-inside.module.css";
 
 function TextInside() {
   return (
@@ -7,7 +6,7 @@ function TextInside() {
       <Title title={"Text inside"} />
       <div className={"line"}>
         <p>Displayed text:</p>
-        <input type="text" className={classes.input}></input>
+        <input type="text" className={"input"}></input>
       </div>
       <div className={"line"}>
         <p>Font:</p>

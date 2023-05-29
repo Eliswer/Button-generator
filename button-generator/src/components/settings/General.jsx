@@ -8,7 +8,7 @@ function General() {
         <Title title={"General"} />
         <div className={"line"}>
           <p>CSS class name:</p>
-          <input type="text" className={classes.input}></input>
+          <input type="text" className={"input"}></input>
         </div>
         <div className={"line"}>
           <p>BG colour:</p>

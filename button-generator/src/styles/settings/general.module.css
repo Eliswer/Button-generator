@@ -1,9 +1,3 @@
-.input {
-  background-color: var(--orange);
-  border-radius: 4px;
-  width: 50%;
-}
-
 .extended-line {
   display: flex;
   flex-direction: row;

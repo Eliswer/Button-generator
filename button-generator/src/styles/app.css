@@ -112,3 +112,9 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 4px;
   overflow: hidden;
 }
+
+.input {
+  background-color: var(--orange);
+  border-radius: 4px;
+  width: 50%;
+}
