@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Title from "../Title";
-import classes from "../../styles/settings/border.module.css";
 
 function Border() {
   const [isChecked, setIsChecked] = useState(false);
@@ -19,7 +18,7 @@ function Border() {
         </div>
       </div>
       {isChecked ? (
-        <div className={classes.enabled}>
+        <div>
           <div className={"line"}>
             <p>Type:</p>
             <div className={"line-flex"}>
@@ -34,7 +33,7 @@ function Border() {
             <div className={"line-flex"}>
               <input
                 type="color"
-                className={classes["colour-choice"]}
+                className={"colour-choice"}
                 value={"#f1404b"}
               ></input>
             </div>

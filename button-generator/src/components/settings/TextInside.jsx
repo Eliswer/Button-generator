@@ -49,7 +49,7 @@ function TextInside() {
         <div className={"line-flex"}>
           <input
             type="color"
-            className={classes["colour-choice"]}
+            className={"colour-choice"}
             value={"#f1404b"}
           ></input>
         </div>

@@ -19,12 +19,12 @@ function General() {
             </select>
             <input
               type="color"
-              className={classes["colour-choice"]}
+              className={"colour-choice"}
               value={"#f1404b"}
             ></input>
             <input
               type="color"
-              className={classes["colour-choice"]}
+              className={"colour-choice"}
               value={"#f1404b"}
             ></input>
           </div>

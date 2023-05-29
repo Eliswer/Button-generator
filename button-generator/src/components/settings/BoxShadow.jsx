@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Title from "../Title";
-import classes from "../../styles/settings/box-shadow.module.css";
 
 function BoxShadow() {
   const [isChecked, setIsChecked] = useState(false);
@@ -19,7 +18,7 @@ function BoxShadow() {
         </div>
       </div>
       {isChecked ? (
-        <div className={classes.enabled}>
+        <div>
           <div className={"line"}>
             <p>Type:</p>
             <div className={"line-flex"}>
@@ -34,7 +33,7 @@ function BoxShadow() {
             <div className={"line-flex"}>
               <input
                 type="color"
-                className={classes["colour-choice"]}
+                className={"colour-choice"}
                 value={"#f1404b"}
               ></input>
             </div>

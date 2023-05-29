@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Title from "../Title";
-import classes from "../../styles/settings/text-shadow.module.css";
 
 function TextShadow() {
   const [isChecked, setIsChecked] = useState(false);
@@ -19,13 +18,13 @@ function TextShadow() {
         </div>
       </div>
       {isChecked ? (
-        <div className={classes.enabled}>
+        <div>
           <div className={"line"}>
             <p>Colour:</p>
             <div className={"line-flex"}>
               <input
                 type="color"
-                className={classes["colour-choice"]}
+                className={"colour-choice"}
                 defaultValue={"#f1404b"}
               ></input>
             </div>
