@@ -3,7 +3,7 @@ import classes from "../../styles/settings/text-inside.module.css";
 
 function TextInside() {
   return (
-    <div className={classes.s2}>
+    <div className={"section"}>
       <Title title={"Text inside"} />
       <div className={"line"}>
         <p>Displayed text:</p>
@@ -19,27 +19,27 @@ function TextInside() {
         </div>
       </div>
       <div className={"line"}>
-        <p className={classes["padding-header"]}>Size:</p>
+        <p>Size:</p>
         <div className={"line-flex"}>
           <input
             type="range"
             min="1"
             max="100"
             defaultValue="50"
-            className={classes.slider}
+            className={"slider"}
             id="myRange"
           />
         </div>
       </div>
       <div className={"line"}>
-        <p className={classes["padding-header"]}>Weight:</p>
+        <p>Weight:</p>
         <div className={"line-flex"}>
           <input
             type="range"
             min="1"
             max="100"
             defaultValue="50"
-            className={classes.slider}
+            className={"slider"}
             id="myRange"
           />
         </div>

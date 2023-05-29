@@ -4,7 +4,7 @@ import classes from "../../styles/settings/general.module.css";
 function General() {
   return (
     <>
-      <div className={classes.s1}>
+      <div className={"section"}>
         <Title title={"General"} />
         <div className={"line"}>
           <p>CSS class name:</p>
@@ -39,7 +39,7 @@ function General() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -50,7 +50,7 @@ function General() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -61,7 +61,7 @@ function General() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -72,7 +72,7 @@ function General() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>

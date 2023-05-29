@@ -10,7 +10,7 @@ function BoxShadow() {
   };
 
   return (
-    <div className={classes.s4}>
+    <div className={"section"}>
       <Title title={"Box Shadow"} />
       <div className={"line"}>
         <p>Enable:</p>
@@ -47,7 +47,7 @@ function BoxShadow() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -60,7 +60,7 @@ function BoxShadow() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -73,7 +73,7 @@ function BoxShadow() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -86,7 +86,7 @@ function BoxShadow() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>

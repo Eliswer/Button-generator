@@ -10,7 +10,7 @@ function TextShadow() {
   };
 
   return (
-    <div className={classes.s4}>
+    <div className={"section"}>
       <Title title={"Text Shadow"} />
       <div className={"line"}>
         <p>Enable:</p>
@@ -38,7 +38,7 @@ function TextShadow() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -51,7 +51,7 @@ function TextShadow() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -64,7 +64,7 @@ function TextShadow() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>

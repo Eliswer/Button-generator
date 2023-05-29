@@ -10,7 +10,7 @@ function Border() {
   };
 
   return (
-    <div className={classes.s3}>
+    <div className={"section"}>
       <Title title={"Border"} />
       <div className={"line"}>
         <p>Enable:</p>
@@ -47,7 +47,7 @@ function Border() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
@@ -60,7 +60,7 @@ function Border() {
                 min="1"
                 max="100"
                 defaultValue="50"
-                className={classes.slider}
+                className={"slider"}
                 id="myRange"
               />
             </div>
