@@ -12,7 +12,7 @@ function Border() {
   return (
     <div className={classes.s3}>
       <Title title={"Border"} />
-      <div className={classes.line}>
+      <div className={"line"}>
         <p>Enable:</p>
         <div className={"line-flex"}>
           <input type="checkbox" checked={isChecked} onChange={checkHandler} />
@@ -46,7 +46,7 @@ function Border() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />
@@ -59,7 +59,7 @@ function Border() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />

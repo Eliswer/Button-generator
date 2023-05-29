@@ -26,7 +26,7 @@ function TextShadow() {
               <input
                 type="color"
                 className={classes["colour-choice"]}
-                value={"#f1404b"}
+                defaultValue={"#f1404b"}
               ></input>
             </div>
           </div>
@@ -37,7 +37,7 @@ function TextShadow() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />
@@ -50,7 +50,7 @@ function TextShadow() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />
@@ -63,7 +63,7 @@ function TextShadow() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />

@@ -25,7 +25,7 @@ function TextInside() {
             type="range"
             min="1"
             max="100"
-            value="50"
+            defaultValue="50"
             className={classes.slider}
             id="myRange"
           />
@@ -38,7 +38,7 @@ function TextInside() {
             type="range"
             min="1"
             max="100"
-            value="50"
+            defaultValue="50"
             className={classes.slider}
             id="myRange"
           />

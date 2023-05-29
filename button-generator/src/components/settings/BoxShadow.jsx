@@ -46,7 +46,7 @@ function BoxShadow() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />
@@ -59,7 +59,7 @@ function BoxShadow() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />
@@ -72,7 +72,7 @@ function BoxShadow() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />
@@ -85,7 +85,7 @@ function BoxShadow() {
                 type="range"
                 min="1"
                 max="100"
-                value="50"
+                defaultValue="50"
                 className={classes.slider}
                 id="myRange"
               />
