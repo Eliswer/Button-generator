@@ -12,8 +12,8 @@ function TextInside() {
         <p>Font:</p>
         <div className={"line-flex"}>
           <select name="cars" id="cars">
-            <option value="volvo">Itim</option>
-            <option value="saab">sans serif</option>
+            <option defaultValue="volvo">Itim</option>
+            <option defaultValue="saab">sans serif</option>
           </select>
         </div>
       </div>
@@ -49,7 +49,7 @@ function TextInside() {
           <input
             type="color"
             className={"colour-choice"}
-            value={"#f1404b"}
+            defaultValue={"#f1404b"}
           ></input>
         </div>
       </div>

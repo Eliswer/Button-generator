@@ -2,7 +2,12 @@ import classes from "../styles/button-preview.module.css";
 import Header from "./Header";
 import preview from "../icons/Preview.svg";
 
+import { useSelector } from "react-redux";
+
 function ButtonPreview({ bg, setBG }) {
+  const borderStyle = useSelector((state) => state.border.type);
+  console.log(borderStyle);
+
   return (
     <div>
       <Header icon={preview} title={"Preview"} />
@@ -40,7 +45,12 @@ function ButtonPreview({ bg, setBG }) {
             }}
           ></div>
         </div>
-        <button className={classes["main-btn"]}>Style me !</button>
+        <button
+          className={classes["main-btn"]}
+          style={{ borderStyle: borderStyle }}
+        >
+          Style me !
+        </button>
       </div>
     </div>
   );

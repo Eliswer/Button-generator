@@ -14,18 +14,18 @@ function General() {
           <p>BG colour:</p>
           <div className={"line-flex"}>
             <select name="cars" id="cars">
-              <option value="volvo">Solid</option>
-              <option value="saab">Gradient</option>
+              <option defaultValue="volvo">Solid</option>
+              <option defaultValue="saab">Gradient</option>
             </select>
             <input
               type="color"
               className={"colour-choice"}
-              value={"#f1404b"}
+              defaultValue={"#f1404b"}
             ></input>
             <input
               type="color"
               className={"colour-choice"}
-              value={"#f1404b"}
+              defaultValue={"#f1404b"}
             ></input>
           </div>
         </div>

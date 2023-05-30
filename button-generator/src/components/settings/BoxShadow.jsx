@@ -23,8 +23,8 @@ function BoxShadow() {
             <p>Type:</p>
             <div className={"line-flex"}>
               <select name="cars" id="cars">
-                <option value="volvo">Outset</option>
-                <option value="saab">**</option>
+                <option defaultValue="volvo">Outset</option>
+                <option defaultValue="saab">**</option>
               </select>
             </div>
           </div>
@@ -34,7 +34,7 @@ function BoxShadow() {
               <input
                 type="color"
                 className={"colour-choice"}
-                value={"#f1404b"}
+                defaultValue={"#f1404b"}
               ></input>
             </div>
           </div>
