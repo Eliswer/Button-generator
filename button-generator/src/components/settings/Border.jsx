@@ -6,14 +6,16 @@ import { useDispatch } from "react-redux";
 
 function Border() {
   const [isChecked, setIsChecked] = useState(false);
+  const [value, setValue] = useState("");
   const dispatch = useDispatch();
 
-  const checkHandler = () => {
+  const checkHandler = (e) => {
     setIsChecked(!isChecked);
   };
 
-  const handleBorderStyleChange = () => {
-    dispatch(borderActions.changeType());
+  const handleBorderStyleChange = (e) => {
+    setValue(e.target.value);
+    dispatch(borderActions.changeType({ borderType: e.target.value }));
   };
 
   return (
@@ -30,22 +32,16 @@ function Border() {
           <div className={"line"}>
             <p>Type:</p>
             <div className={"line-flex"}>
-              <select name="cars" id="cars">
-                <option defaultValue="solid" onClick={handleBorderStyleChange}>
-                  Solid
-                </option>
-                <option defaultValue="dotted" onClick={handleBorderStyleChange}>
-                  Dotted
-                </option>
-                <option defaultValue="dashed" onClick={handleBorderStyleChange}>
-                  Dashed
-                </option>
-                <option defaultValue="double" onClick={handleBorderStyleChange}>
-                  Double
-                </option>
-                <option defaultValue="none" onClick={handleBorderStyleChange}>
-                  None
-                </option>
+              <select
+                name="border-style"
+                onChange={handleBorderStyleChange}
+                value={value}
+              >
+                <option value="dotted">Dotted</option>
+                <option value="solid">Solid</option>
+                <option value="dashed">Dashed</option>
+                <option value="double">Double</option>
+                <option value="none">None</option>
               </select>
             </div>
           </div>

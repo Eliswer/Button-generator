@@ -1,21 +1,45 @@
 import Title from "../Title";
 import classes from "../../styles/settings/general.module.css";
 
+import { useState } from "react";
+
+import { useDispatch } from "react-redux";
+import { generalActions } from "../../store/general";
+
 function General() {
+  const [disabled, setDisabled] = useState(true);
+  const dispatch = useDispatch();
+
+  const handleClassNameChange = (e) => {
+    dispatch(generalActions.changeClassName(e.target.value));
+  };
+
+  const handleColourChoice = (e) => {
+    if (e.target.defaultValue === "solid") {
+      setDisabled(true);
+    } else if (e.target.value === "gradient") {
+      setDisabled(false);
+    }
+  };
+
   return (
     <>
       <div className={"section"}>
         <Title title={"General"} />
         <div className={"line"}>
           <p>CSS class name:</p>
-          <input type="text" className={"input"}></input>
+          <input
+            type="text"
+            className={"input"}
+            onChange={handleClassNameChange}
+          ></input>
         </div>
         <div className={"line"}>
           <p>BG colour:</p>
           <div className={"line-flex"}>
-            <select name="cars" id="cars">
-              <option defaultValue="volvo">Solid</option>
-              <option defaultValue="saab">Gradient</option>
+            <select name="color" onChange={handleColourChoice}>
+              <option defaultValue="solid">Solid</option>
+              <option defaultValue="gradient">Gradient</option>
             </select>
             <input
               type="color"
@@ -26,6 +50,7 @@ function General() {
               type="color"
               className={"colour-choice"}
               defaultValue={"#f1404b"}
+              disabled={disabled}
             ></input>
           </div>
         </div>
