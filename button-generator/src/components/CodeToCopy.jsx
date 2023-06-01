@@ -2,10 +2,10 @@ import Header from "./Header";
 
 import sourceCode from "../icons/Source-code.svg";
 
-import { useSelector } from "react-redux";
+/*import { useSelector } from "react-redux";*/
 
 function CodeToCopy() {
-  const className = useSelector((state) => state.general.className);
+  /*const className = useSelector((state) => state.general.className);*/
 
   return (
     <div>

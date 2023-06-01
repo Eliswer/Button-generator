@@ -7,6 +7,10 @@ import { useDispatch } from "react-redux";
 function Border() {
   const [isChecked, setIsChecked] = useState(false);
   const [value, setValue] = useState("");
+  const [colourValue, setColourValue] = useState("");
+  const [widthValue, setWidthValue] = useState("");
+  const [radiusValue, setRadiusValue] = useState("");
+
   const dispatch = useDispatch();
 
   const checkHandler = (e) => {
@@ -16,6 +20,21 @@ function Border() {
   const handleBorderStyleChange = (e) => {
     setValue(e.target.value);
     dispatch(borderActions.changeType({ borderType: e.target.value }));
+  };
+
+  const handleBorderColourChange = (e) => {
+    setColourValue(e.target.value);
+    dispatch(borderActions.changeColour({ borderColour: e.target.value }));
+  };
+
+  const handleBorderWidthChange = (e) => {
+    setWidthValue(e.target.value);
+    dispatch(borderActions.changeWidth({ borderWidth: e.target.value }));
+  };
+
+  const handleBorderRadiusChange = (e) => {
+    setRadiusValue(e.target.value);
+    dispatch(borderActions.changeRadius({ borderRadius: e.target.value }));
   };
 
   return (
@@ -51,7 +70,8 @@ function Border() {
               <input
                 type="color"
                 className={"colour-choice"}
-                defaultValue={"#f1404b"}
+                value={colourValue}
+                onChange={handleBorderColourChange}
               ></input>
             </div>
           </div>
@@ -61,10 +81,10 @@ function Border() {
               <input
                 type="range"
                 min="1"
-                max="100"
-                defaultValue="50"
+                max="50"
+                value={widthValue}
                 className={"slider"}
-                id="myRange"
+                onChange={handleBorderWidthChange}
               />
             </div>
           </div>
@@ -74,10 +94,10 @@ function Border() {
               <input
                 type="range"
                 min="1"
-                max="100"
-                defaultValue="50"
+                max="50"
+                value={radiusValue}
                 className={"slider"}
-                id="myRange"
+                onChange={handleBorderRadiusChange}
               />
             </div>
           </div>

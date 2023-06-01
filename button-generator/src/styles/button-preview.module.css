@@ -28,6 +28,7 @@
   width: 30%;
   height: 7vh;
   margin-top: 70px;
+  border: 2px solid black;
   border-radius: 7px;
 }
 

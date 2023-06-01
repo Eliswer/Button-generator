@@ -5,7 +5,14 @@ import preview from "../icons/Preview.svg";
 import { useSelector } from "react-redux";
 
 function ButtonPreview({ bg, setBG }) {
-  let borderType = useSelector((state) => state.border.type)?.borderType;
+  const borderType = useSelector((state) => state.border.type)?.borderType;
+  const borderColour = useSelector(
+    (state) => state.border.colour
+  )?.borderColour;
+  const borderWidth = useSelector((state) => state.border.width)?.borderWidth;
+  const borderRadius = useSelector(
+    (state) => state.border.radius
+  )?.borderRadius;
 
   return (
     <div>
@@ -46,7 +53,12 @@ function ButtonPreview({ bg, setBG }) {
         </div>
         <button
           className={classes["main-btn"]}
-          style={{ borderStyle: borderType }}
+          style={{
+            borderStyle: borderType,
+            borderColor: borderColour,
+            borderWidth: borderWidth + "px",
+            borderRadius: borderRadius + "px",
+          }}
         >
           Style me !
         </button>
