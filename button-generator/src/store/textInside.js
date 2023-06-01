@@ -10,17 +10,29 @@ const textInsideSlice = createSlice({
     colour: "",
   },
   reducers: {
-    changeDisplayedText(state, action) {},
-    changeFont(state, action) {
+    changeDisplayedText(state, action) {
       const newText = action.payload;
       state.displayedText = newText;
     },
-    changeSize(state, action) {},
-    changeWeight(state, action) {},
-    changeColour(state, action) {},
+    changeFont(state, action) {
+      const newFont = action.payload;
+      state.font = newFont;
+    },
+    changeSize(state, action) {
+      const newSize = action.payload;
+      state.size = newSize;
+    },
+    changeWeight(state, action) {
+      const newWeight = action.payload;
+      state.weight = newWeight;
+    },
+    changeColour(state, action) {
+      const newColour = action.payload;
+      state.colour = newColour;
+    },
   },
 });
 
-export const borderActions = borderSlice.actions;
+export const textInsideActions = textInsideSlice.actions;
 
-export default borderSlice;
+export default textInsideSlice;

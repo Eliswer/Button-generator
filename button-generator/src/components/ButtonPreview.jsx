@@ -5,6 +5,7 @@ import preview from "../icons/Preview.svg";
 import { useSelector } from "react-redux";
 
 function ButtonPreview({ bg, setBG }) {
+  /* Border changes */
   const borderType = useSelector((state) => state.border.type)?.borderType;
   const borderColour = useSelector(
     (state) => state.border.colour
@@ -13,6 +14,19 @@ function ButtonPreview({ bg, setBG }) {
   const borderRadius = useSelector(
     (state) => state.border.radius
   )?.borderRadius;
+
+  /* Text inside changes */
+  const newDisplayedText = useSelector(
+    (state) => state.textInside.displayedText
+  )?.newText;
+
+  const newFont = useSelector((state) => state.textInside.font)?.newFont;
+
+  /*const className = useSelector(
+    (state) => state.general.className
+  )?.newClassName;
+
+  console.log(className);*/
 
   return (
     <div>
@@ -58,9 +72,10 @@ function ButtonPreview({ bg, setBG }) {
             borderColor: borderColour,
             borderWidth: borderWidth + "px",
             borderRadius: borderRadius + "px",
+            fontFamily: newFont + "" + "sans-serif",
           }}
         >
-          Style me !
+          Style me !{newDisplayedText}
         </button>
       </div>
     </div>

@@ -4,9 +4,9 @@ const generalSlice = createSlice({
   name: "general",
   initialState: {
     className: "",
-    backgroundType: "solid",
-    backgroundSolid: "white",
-    backgroundGradient: "linear-gradient(black, orange)",
+    backgroundType: "",
+    backgroundSolid: "",
+    backgroundGradient: "",
     paddingTop: "",
     paddingRight: "",
     paddingBottom: "",
@@ -14,12 +14,12 @@ const generalSlice = createSlice({
   },
   reducers: {
     changeClassName(state, action) {
-      const className = action.payload;
-      state.className = className;
+      const newClassName = action.payload;
+      state.className = newClassName;
     },
     changeBackgroundType(state, action) {
-      const backgroundType = action.payload;
-      state.backgroundType = backgroundType;
+      const newBackgroundType = action.payload;
+      state.backgroundType = newBackgroundType;
     },
   },
 });

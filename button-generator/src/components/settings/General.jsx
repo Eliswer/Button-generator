@@ -11,7 +11,7 @@ function General() {
   const dispatch = useDispatch();
 
   const handleClassNameChange = (e) => {
-    dispatch(generalActions.changeClassName(e.target.value));
+    dispatch(generalActions.changeClassName({ newClassName: e.target.value }));
   };
 
   const handleColourChoice = (e) => {
