@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 function Border() {
   const [isChecked, setIsChecked] = useState(false);
   const [value, setValue] = useState("");
-  const [colourValue, setColourValue] = useState("");
+  const [colourValue, setColourValue] = useState("#f1404b");
   const [widthValue, setWidthValue] = useState("");
   const [radiusValue, setRadiusValue] = useState("");
 

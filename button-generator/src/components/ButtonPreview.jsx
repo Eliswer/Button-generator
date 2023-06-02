@@ -85,6 +85,31 @@ function ButtonPreview({ bg, setBG }) {
     (state) => state.textShadow.blur
   )?.newBlurValue;
 
+  /* Box shadow changes */
+  const newBoxShadowType = useSelector(
+    (state) => state.boxShadow.type
+  )?.newType;
+
+  const newBoxShadowColour = useSelector(
+    (state) => state.boxShadow.colour
+  )?.newColour;
+
+  const newBoxShadowHorizontalValue = useSelector(
+    (state) => state.boxShadow.horizontal
+  )?.newHorizontalValue;
+
+  const newBoxShadowVerticalValue = useSelector(
+    (state) => state.boxShadow.vertical
+  )?.newVerticalValue;
+
+  const newBoxShadowBlur = useSelector(
+    (state) => state.boxShadow.blur
+  )?.newBlurValue;
+
+  const newBoxShadowSpread = useSelector(
+    (state) => state.boxShadow.spread
+  )?.newSpreadValue;
+
   return (
     <div>
       <Header icon={preview} title={"Preview"} />
@@ -139,7 +164,15 @@ function ButtonPreview({ bg, setBG }) {
             paddingBottom: newPaddingBottom + "px",
             paddingLeft: newPaddingLeft + "px",
             paddingRight: newPaddingRight + "px",
-            textShadow: `${newTextShadowColour} ${newHorizontalValue}px ${newVerticalValue}px ${newBlurValue}px`,
+            textShadow: `${newTextShadowColour} ${
+              newHorizontalValue || "5"
+            }px ${newVerticalValue || "5"}px ${newBlurValue || "5"}px`,
+            boxShadow: `${newBoxShadowType || ""} ${
+              newBoxShadowHorizontalValue || "10"
+            }px ${newBoxShadowVerticalValue || "5"}px ${
+              newBoxShadowBlur || "5"
+            }px 
+            ${newBoxShadowSpread || "5"}px ${newBoxShadowColour}`,
           }}
         >
           {newDisplayedText || "Style me !"}
