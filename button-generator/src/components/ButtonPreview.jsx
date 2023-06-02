@@ -16,14 +16,13 @@ function ButtonPreview({ bg, setBG }) {
   )?.borderRadius;
 
   /* Text inside changes */
-  /* DOES NOT WORK ?? */
   const newDisplayedText = useSelector(
     (state) => state.textInside.displayedText
   )?.newText;
 
   const newFont = useSelector((state) => state.textInside.font)?.newFont;
 
-  /* General settings */
+  /* General changes */
   const newBackgroundType = useSelector(
     (state) => state.general.backgroundType
   )?.newColour;
@@ -62,6 +61,23 @@ function ButtonPreview({ bg, setBG }) {
   const newPaddingRight = useSelector(
     (state) => state.general.paddingRight
   )?.newPaddingRight;
+
+  /* Text shadow changes */
+  const newTextShadowColour = useSelector(
+    (state) => state.textShadow.colour
+  )?.newColour;
+
+  const newHorizontalValue = useSelector(
+    (state) => state.textShadow.horizontal
+  )?.newHorintalValue;
+
+  const newVerticalValue = useSelector(
+    (state) => state.textShadow.vertical
+  )?.newVerticalValue;
+
+  const newBlurValue = useSelector(
+    (state) => state.textShadow.blur
+  )?.newBlurValue;
 
   return (
     <div>
@@ -107,7 +123,7 @@ function ButtonPreview({ bg, setBG }) {
             borderColor: borderColour,
             borderWidth: borderWidth + "px",
             borderRadius: borderRadius + "px",
-            /* fontFamily: newFont + " " + "sans-serif",*/
+            fontFamily: newFont + " " + "sans-serif",
             background: background,
             height: newHeight + "px",
             width: newWidth + "px",
@@ -115,9 +131,10 @@ function ButtonPreview({ bg, setBG }) {
             paddingBottom: newPaddingBottom + "px",
             paddingLeft: newPaddingLeft + "px",
             paddingRight: newPaddingRight + "px",
+            textShadow: `${newTextShadowColour} ${newHorizontalValue}px ${newVerticalValue}px ${newBlurValue}px`,
           }}
         >
-          Style me !{newDisplayedText}
+          {newDisplayedText || "Style me !"}
         </button>
       </div>
     </div>
