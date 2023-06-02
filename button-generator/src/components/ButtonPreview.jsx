@@ -16,17 +16,52 @@ function ButtonPreview({ bg, setBG }) {
   )?.borderRadius;
 
   /* Text inside changes */
+  /* DOES NOT WORK ?? */
   const newDisplayedText = useSelector(
     (state) => state.textInside.displayedText
   )?.newText;
 
   const newFont = useSelector((state) => state.textInside.font)?.newFont;
 
-  /*const className = useSelector(
-    (state) => state.general.className
-  )?.newClassName;
+  /* General settings */
+  const newBackgroundType = useSelector(
+    (state) => state.general.backgroundType
+  )?.newColour;
 
-  console.log(className);*/
+  const newSolidColour = useSelector(
+    (state) => state.general.backgroundColourSolid
+  )?.solidColour;
+
+  const newGradientColour = useSelector(
+    (state) => state.general.backgroundColourGradient
+  )?.gradientColour;
+
+  let background = "white";
+
+  if (newBackgroundType === "solid") {
+    background = newSolidColour;
+  } else if (newBackgroundType === "gradient") {
+    background = `linear-gradient(${newSolidColour}, ${newGradientColour})`;
+  }
+
+  const newHeight = useSelector((state) => state.general.height)?.newHeight;
+  const newWidth = useSelector((state) => state.general.width)?.newWidth;
+
+  const newPaddingTop = useSelector(
+    (state) => state.general.paddingTop
+  )?.newPaddingTop;
+
+  const newPaddingBottom = useSelector(
+    (state) => state.general.paddingBottom
+  )?.newPaddingBottom;
+
+  const newPaddingLeft = useSelector(
+    (state) => state.general.paddingLeft
+  )?.newPaddingLeft;
+
+  const newPaddingRight = useSelector(
+    (state) => state.general.paddingRight
+  )?.newPaddingRight;
 
   return (
     <div>
@@ -72,7 +107,14 @@ function ButtonPreview({ bg, setBG }) {
             borderColor: borderColour,
             borderWidth: borderWidth + "px",
             borderRadius: borderRadius + "px",
-            fontFamily: newFont + "" + "sans-serif",
+            /* fontFamily: newFont + " " + "sans-serif",*/
+            background: background,
+            height: newHeight + "px",
+            width: newWidth + "px",
+            paddingTop: newPaddingTop + "px",
+            paddingBottom: newPaddingBottom + "px",
+            paddingLeft: newPaddingLeft + "px",
+            paddingRight: newPaddingRight + "px",
           }}
         >
           Style me !{newDisplayedText}

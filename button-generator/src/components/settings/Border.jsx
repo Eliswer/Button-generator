@@ -56,8 +56,9 @@ function Border() {
                 onChange={handleBorderStyleChange}
                 value={value}
               >
-                <option value="dotted">Dotted</option>
+                <option>Choose</option>
                 <option value="solid">Solid</option>
+                <option value="dotted">Dotted</option>
                 <option value="dashed">Dashed</option>
                 <option value="double">Double</option>
                 <option value="none">None</option>

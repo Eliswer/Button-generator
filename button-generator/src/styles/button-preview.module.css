@@ -30,6 +30,8 @@
   margin-top: 70px;
   border: 2px solid black;
   border-radius: 7px;
+  text-align: center;
+  align-items: center;
 }
 
 .button-preview-wrapper {

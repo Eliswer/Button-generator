@@ -8,6 +8,17 @@ import { generalActions } from "../../store/general";
 
 function General() {
   const [disabled, setDisabled] = useState(true);
+  const [colourValue, setColourValue] = useState("#7a7a7a");
+  const [colourValueSolid, setColourValueSolid] = useState("#f1404b");
+
+  const [heightValue, setHeightValue] = useState("");
+  const [widthValue, setWidthValue] = useState("");
+
+  const [paddingTop, setPaddingTop] = useState("");
+  const [paddingBottom, setPaddingBottom] = useState("");
+  const [paddingLeft, setPaddingLeft] = useState("");
+  const [paddingRight, setPaddingRight] = useState("");
+
   const dispatch = useDispatch();
 
   const handleClassNameChange = (e) => {
@@ -15,11 +26,57 @@ function General() {
   };
 
   const handleColourChoice = (e) => {
-    if (e.target.defaultValue === "solid") {
+    if (e.target.value === "solid") {
       setDisabled(true);
+      setColourValue("#7a7a7a");
     } else if (e.target.value === "gradient") {
       setDisabled(false);
+      setColourValue("#f1404b");
     }
+
+    dispatch(
+      generalActions.changeBackgroundType({ newColour: e.target.value })
+    );
+  };
+
+  const handleWidthChange = (e) => {
+    setWidthValue(e.target.value);
+    dispatch(generalActions.changeWidth({ newWidth: e.target.value }));
+  };
+
+  const handleHeightChange = (e) => {
+    setHeightValue(e.target.value);
+    dispatch(generalActions.changeHeight({ newHeight: e.target.value }));
+  };
+
+  const handlePaddingTopChange = (e) => {
+    setPaddingTop(e.target.value);
+    dispatch(
+      generalActions.changePaddingTop({ newPaddingTop: e.target.value })
+    );
+  };
+
+  const handlePaddingBottomChange = (e) => {
+    setPaddingBottom(e.target.value);
+    dispatch(
+      generalActions.changePaddingBottom({
+        newPaddingBottom: e.target.value,
+      })
+    );
+  };
+
+  const handlePaddingLeftChange = (e) => {
+    setPaddingLeft(e.target.value);
+    dispatch(
+      generalActions.changePaddingLeft({ newPaddingLeft: e.target.value })
+    );
+  };
+
+  const handlePaddingRightChange = (e) => {
+    setPaddingRight(e.target.value);
+    dispatch(
+      generalActions.changePaddingRight({ newPaddingRight: e.target.value })
+    );
   };
 
   return (
@@ -38,20 +95,63 @@ function General() {
           <p>BG colour:</p>
           <div className={"line-flex"}>
             <select name="color" onChange={handleColourChoice}>
-              <option defaultValue="solid">Solid</option>
-              <option defaultValue="gradient">Gradient</option>
+              <option>Solid / Gradient</option>
+              <option value="solid">Solid</option>
+              <option value="gradient">Gradient</option>
             </select>
             <input
               type="color"
               className={"colour-choice"}
-              defaultValue={"#f1404b"}
+              value={colourValueSolid}
+              onChange={(e) => {
+                setColourValueSolid(e.target.value);
+                dispatch(
+                  generalActions.changeBgColourSolid({
+                    solidColour: e.target.value,
+                  })
+                );
+              }}
             ></input>
             <input
               type="color"
               className={"colour-choice"}
-              defaultValue={"#f1404b"}
+              value={colourValue}
+              onChange={(e) => {
+                setColourValue(e.target.value);
+                dispatch(
+                  generalActions.changeBgColourGradient({
+                    gradientColour: e.target.value,
+                  })
+                );
+              }}
               disabled={disabled}
             ></input>
+          </div>
+        </div>
+        <div className={"line"}>
+          <p>Width:</p>
+          <div className={"line-flex"}>
+            <input
+              type="range"
+              min="1"
+              max="300"
+              onChange={handleWidthChange}
+              value={widthValue}
+              className={"slider"}
+            />
+          </div>
+        </div>
+        <div className={"line"}>
+          <p>Height:</p>
+          <div className={"line-flex"}>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              onChange={handleHeightChange}
+              value={heightValue}
+              className={"slider"}
+            />
           </div>
         </div>
         <div className={classes["extended-line"]}>
@@ -63,9 +163,9 @@ function General() {
                 type="range"
                 min="1"
                 max="100"
-                defaultValue="50"
+                value={paddingTop}
+                onChange={handlePaddingTopChange}
                 className={"slider"}
-                id="myRange"
               />
             </div>
             <div className={classes.padding}>
@@ -74,9 +174,9 @@ function General() {
                 type="range"
                 min="1"
                 max="100"
-                defaultValue="50"
+                value={paddingBottom}
+                onChange={handlePaddingBottomChange}
                 className={"slider"}
-                id="myRange"
               />
             </div>
             <div className={classes.padding}>
@@ -85,9 +185,9 @@ function General() {
                 type="range"
                 min="1"
                 max="100"
-                defaultValue="50"
+                value={paddingLeft}
+                onChange={handlePaddingLeftChange}
                 className={"slider"}
-                id="myRange"
               />
             </div>
             <div className={classes.padding}>
@@ -96,9 +196,9 @@ function General() {
                 type="range"
                 min="1"
                 max="100"
-                defaultValue="50"
+                value={paddingRight}
+                onChange={handlePaddingRightChange}
                 className={"slider"}
-                id="myRange"
               />
             </div>
           </div>
