@@ -20,7 +20,13 @@ function ButtonPreview({ bg, setBG }) {
     (state) => state.textInside.displayedText
   )?.newText;
 
+  const newTextSize = useSelector((state) => state.textInside.size)?.newSize;
+
   const newFont = useSelector((state) => state.textInside.font)?.newFont;
+
+  const newFontWeight = useSelector(
+    (state) => state.textInside.weight
+  )?.newWeightValue;
 
   /* General changes */
   const newBackgroundType = useSelector(
@@ -123,6 +129,8 @@ function ButtonPreview({ bg, setBG }) {
             borderColor: borderColour,
             borderWidth: borderWidth + "px",
             borderRadius: borderRadius + "px",
+            fontSize: newTextSize + "px",
+            fontWeight: newFontWeight,
             fontFamily: newFont + " " + "sans-serif",
             background: background,
             height: newHeight + "px",

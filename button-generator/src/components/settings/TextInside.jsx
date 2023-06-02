@@ -7,7 +7,9 @@ import { useDispatch } from "react-redux";
 function TextInside() {
   const defaultItim = "(default)";
   const [value, setValue] = useState("");
-  const [font, setFont] = useState("");
+  const [font, setFont] = useState("Itim");
+  const [size, setSize] = useState("16px");
+  const [fontWeight, setfontWeight] = useState("");
 
   const dispatch = useDispatch();
 
@@ -24,6 +26,18 @@ function TextInside() {
     dispatch(textInsideActions.changeFont({ newFont: e.target.value }));
   };
 
+  const handleResize = (e) => {
+    setSize(e.target.value);
+    dispatch(textInsideActions.changeSize({ newSize: e.target.value }));
+  };
+
+  const handleFontWeightChange = (e) => {
+    setfontWeight(e.target.value);
+    dispatch(
+      textInsideActions.changeWeight({ newWeightValue: e.target.value })
+    );
+  };
+
   return (
     <div className={"section"}>
       <Title title={"Text inside"} />
@@ -35,6 +49,19 @@ function TextInside() {
           value={value}
           onChange={handleTextChange}
         ></input>
+      </div>
+      <div className={"line"}>
+        <p>Size:</p>
+        <div className={"line-flex"}>
+          <input
+            type="range"
+            min="1"
+            max="50"
+            value={size}
+            onChange={handleResize}
+            className={"slider"}
+          />
+        </div>
       </div>
       <div className={"line"}>
         <p>Font:</p>
@@ -54,29 +81,19 @@ function TextInside() {
         </div>
       </div>
       <div className={"line"}>
-        <p>Size:</p>
-        <div className={"line-flex"}>
-          <input
-            type="range"
-            min="1"
-            max="100"
-            defaultValue="50"
-            className={"slider"}
-            id="myRange"
-          />
-        </div>
-      </div>
-      <div className={"line"}>
         <p>Weight:</p>
         <div className={"line-flex"}>
-          <input
-            type="range"
-            min="1"
-            max="100"
-            defaultValue="50"
-            className={"slider"}
-            id="myRange"
-          />
+          <select
+            name="font-weight"
+            value={fontWeight}
+            onChange={handleFontWeightChange}
+          >
+            <option>Choose</option>
+            <option value="400">Normal</option>
+            <option value="500">Medium</option>
+            <option value="600">Semi-bold</option>
+            <option value="700">Bold</option>
+          </select>
         </div>
       </div>
       <div className={"line"}>
