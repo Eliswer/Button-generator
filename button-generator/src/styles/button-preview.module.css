@@ -6,7 +6,7 @@
 }
 
 .bg-change-wrapper {
-  margin-top: 10px;
+  margin-top: 3.5vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -41,5 +41,11 @@
 @media only screen and (min-width: 425px) {
   .bg-change-wrapper {
     padding: 0 20vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .bg-change-wrapper {
+    padding: 0 35vw;
   }
 }

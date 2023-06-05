@@ -11,6 +11,8 @@ function Border() {
   const [widthValue, setWidthValue] = useState("");
   const [radiusValue, setRadiusValue] = useState("");
 
+  const handleReset = () => {};
+
   const dispatch = useDispatch();
 
   const checkHandler = (e) => {
@@ -100,6 +102,14 @@ function Border() {
                 className={"slider"}
                 onChange={handleBorderRadiusChange}
               />
+            </div>
+          </div>
+          <div className="line">
+            <p>Reset Borderto default</p>
+            <div className={"line-flex"}>
+              <button className="reset-button" onClick={handleReset}>
+                Reset
+              </button>
             </div>
           </div>
         </div>

@@ -162,7 +162,7 @@ function General() {
               <input
                 type="range"
                 min="1"
-                max="100"
+                max="20"
                 value={paddingTop}
                 onChange={handlePaddingTopChange}
                 className={"slider"}
@@ -173,7 +173,7 @@ function General() {
               <input
                 type="range"
                 min="1"
-                max="100"
+                max="20"
                 value={paddingBottom}
                 onChange={handlePaddingBottomChange}
                 className={"slider"}
@@ -184,7 +184,7 @@ function General() {
               <input
                 type="range"
                 min="1"
-                max="100"
+                max="20"
                 value={paddingLeft}
                 onChange={handlePaddingLeftChange}
                 className={"slider"}
@@ -195,7 +195,7 @@ function General() {
               <input
                 type="range"
                 min="1"
-                max="100"
+                max="20"
                 value={paddingRight}
                 onChange={handlePaddingRightChange}
                 className={"slider"}

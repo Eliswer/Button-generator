@@ -2,7 +2,7 @@
 
 :root {
   --orange: #f1404b;
-  --bg-white: DDDFE6;
+  --bg-white: #dddfe6;
   --white: #ffffff;
 }
 
@@ -41,6 +41,12 @@ html {
   padding: 5px 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btns-wrapper button:hover {
+  background-color: var(--orange);
 }
 
 .bottom-wrapper {
@@ -67,7 +73,10 @@ select {
 }
 
 .section {
-  margin: 10px;
+  margin-top: 3vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid black;
 }
 
@@ -117,4 +126,10 @@ input[type="color"]::-webkit-color-swatch {
   background-color: var(--orange);
   border-radius: 4px;
   width: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    width: 47%;
+  }
 }
