@@ -73,6 +73,7 @@ function BoxShadow() {
                 onChange={handleBoxShadowTypeChange}
               >
                 <option>Choose</option>
+                <option value="none">None</option>
                 <option value="">Outset</option>
                 <option value="inset">Inset</option>
               </select>

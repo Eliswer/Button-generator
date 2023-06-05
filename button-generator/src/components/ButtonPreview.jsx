@@ -110,6 +110,14 @@ function ButtonPreview({ bg, setBG }) {
     (state) => state.boxShadow.spread
   )?.newSpreadValue;
 
+  let showShadow;
+
+  if (newBoxShadowType === "none") {
+    showShadow = false;
+  } else {
+    showShadow = true;
+  }
+
   return (
     <div>
       <Header icon={preview} title={"Preview"} />
@@ -167,12 +175,16 @@ function ButtonPreview({ bg, setBG }) {
             textShadow: `${newTextShadowColour} ${
               newHorizontalValue || "5"
             }px ${newVerticalValue || "5"}px ${newBlurValue || "5"}px`,
-            boxShadow: `${newBoxShadowType || ""} ${
-              newBoxShadowHorizontalValue || "10"
-            }px ${newBoxShadowVerticalValue || "5"}px ${
-              newBoxShadowBlur || "5"
-            }px 
-            ${newBoxShadowSpread || "5"}px ${newBoxShadowColour}`,
+            boxShadow: `${
+              showShadow
+                ? `${newBoxShadowType || ""} ${
+                    newBoxShadowHorizontalValue || "10"
+                  }px ${newBoxShadowVerticalValue || "5"}px ${
+                    newBoxShadowBlur || "5"
+                  }px 
+            ${newBoxShadowSpread || "5"}px ${newBoxShadowColour}`
+                : "none"
+            }`,
           }}
         >
           {newDisplayedText || "Style me !"}

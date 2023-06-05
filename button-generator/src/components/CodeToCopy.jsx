@@ -145,7 +145,11 @@ function CodeToCopy() {
     } else {
       setBoxShadowShow(true);
     }
-  }, [newBoxShadowColour]);
+
+    if (newBoxShadowType === "none") {
+      setBoxShadowShow(false);
+    }
+  }, [newBoxShadowColour, newBoxShadowType]);
 
   return (
     <div>
