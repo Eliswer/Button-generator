@@ -122,6 +122,15 @@ function ButtonPreview({ bg, setBG }) {
     showShadow = true;
   }
 
+  /* change p colour */
+  let changeColour = "black";
+
+  if (bg === "#171716") {
+    changeColour = "white";
+  } else {
+    changeColour = "black";
+  }
+
   return (
     <div>
       <Header icon={preview} title={"Preview"} />
@@ -129,7 +138,9 @@ function ButtonPreview({ bg, setBG }) {
         className={`${classes["button-preview-wrapper"]} ${classes.wrapper}`}
       >
         <div className={classes["bg-change-wrapper"]}>
-          <p className={classes.paragraph}>change BG:</p>
+          <p className={classes.paragraph} style={{ color: changeColour }}>
+            change BG:
+          </p>
           <div
             className={classes["bg-change-block"]}
             style={{ backgroundColor: "#171716" }}

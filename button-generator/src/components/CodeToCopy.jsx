@@ -154,7 +154,7 @@ function CodeToCopy() {
   return (
     <div>
       <Header icon={sourceCode} title={"Code to copy"} margin={"-40px"} />
-      <div style={{ marginTop: "40px" }} className={classes["code-wrapper"]}>
+      <div className={classes["code-wrapper"]}>
         <pre>
           .{className}{" "}
           {`{

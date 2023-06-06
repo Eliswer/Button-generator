@@ -18,6 +18,7 @@
   width: 20px;
   border: 1px solid black;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .paragraph {
@@ -26,8 +27,9 @@
 
 .main-btn {
   width: 30%;
+  position: absolute;
+  top: 170px;
   height: 7vh;
-  margin-top: 70px;
   border: 2px solid black;
   border-radius: 7px;
   text-align: center;
@@ -47,5 +49,21 @@
 @media only screen and (min-width: 1024px) {
   .bg-change-wrapper {
     padding: 0 35vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .bg-change-block {
+    height: 30px;
+    width: 30px;
+  }
+
+  .main-btn {
+    top: 20vh;
+    font-size: 30px;
+  }
+
+  .paragraph {
+    font-size: 30px;
   }
 }

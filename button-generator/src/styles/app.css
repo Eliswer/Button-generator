@@ -57,6 +57,7 @@ html {
 select {
   border-radius: 4px;
   width: 80px;
+  cursor: pointer;
 }
 
 .line {
@@ -80,6 +81,10 @@ select {
   border-bottom: 1px solid black;
 }
 
+input {
+  cursor: pointer;
+}
+
 input[type="color"]::-moz-color-swatch {
   border: none;
 }
@@ -91,6 +96,12 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
 input[type="color"]::-webkit-color-swatch {
   border: none;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  border-radius: 7px;
 }
 
 .slider {
@@ -131,5 +142,39 @@ input[type="color"]::-webkit-color-swatch {
 @media only screen and (min-width: 768px) {
   .section {
     width: 47%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .btns-wrapper button {
+    width: 10%;
+    height: 60px;
+    font-size: 1.2vw;
+    border-radius: 14px;
+  }
+
+  .section p {
+    font-size: 30px;
+  }
+
+  select {
+    width: 150px;
+    height: 30px;
+    font-size: 25px;
+  }
+
+  .colour-choice {
+    height: 30px;
+    width: 30px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    height: 30px;
+    width: 30px;
+  }
+
+  input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
   }
 }

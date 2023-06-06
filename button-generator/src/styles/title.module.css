@@ -3,3 +3,9 @@
   font-weight: lighter;
   margin-bottom: 10px;
 }
+
+@media (min-width: 1920px) {
+  .main {
+    font-size: 45px;
+  }
+}

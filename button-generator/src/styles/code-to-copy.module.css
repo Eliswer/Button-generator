@@ -1,6 +1,12 @@
 .code-wrapper {
-  margin: 20px;
+  margin-top: 40px;
   padding-top: 10px;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 1920px) {
+  .code-wrapper pre {
+    font-size: 30px;
+  }
 }

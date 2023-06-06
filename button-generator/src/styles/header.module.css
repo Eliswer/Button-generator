@@ -20,3 +20,13 @@
 .icon {
   margin: 0 10px;
 }
+
+@media (min-width: 1920px) {
+  .title {
+    font-size: 60px;
+  }
+
+  .icon {
+    height: 55px;
+  }
+}

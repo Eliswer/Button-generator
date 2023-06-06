@@ -133,8 +133,8 @@ function General() {
           <div className={"line-flex"}>
             <input
               type="range"
-              min="1"
-              max="300"
+              min="100"
+              max="500"
               onChange={handleWidthChange}
               value={widthValue}
               className={"slider"}
@@ -146,8 +146,8 @@ function General() {
           <div className={"line-flex"}>
             <input
               type="range"
-              min="1"
-              max="100"
+              min="50"
+              max="300"
               onChange={handleHeightChange}
               value={heightValue}
               className={"slider"}
