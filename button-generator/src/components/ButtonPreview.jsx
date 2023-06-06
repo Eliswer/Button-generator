@@ -28,6 +28,10 @@ function ButtonPreview({ bg, setBG }) {
     (state) => state.textInside.weight
   )?.newWeightValue;
 
+  const newFontColour = useSelector(
+    (state) => state.textInside.colour
+  )?.newColour;
+
   /* General changes */
   const newBackgroundType = useSelector(
     (state) => state.general.backgroundType
@@ -164,7 +168,8 @@ function ButtonPreview({ bg, setBG }) {
             borderRadius: borderRadius + "px",
             fontSize: newTextSize + "px",
             fontWeight: newFontWeight,
-            fontFamily: newFont + " " + "sans-serif",
+            fontFamily: `${newFont || "Itim"}` + "," + "sans-serif",
+            color: newFontColour,
             background: background,
             height: newHeight + "px",
             width: newWidth + "px",

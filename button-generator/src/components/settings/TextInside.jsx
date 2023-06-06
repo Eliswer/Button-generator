@@ -10,6 +10,7 @@ function TextInside() {
   const [font, setFont] = useState("Itim");
   const [size, setSize] = useState("16px");
   const [fontWeight, setfontWeight] = useState("");
+  const [fontColour, setfontColour] = useState("black");
 
   const dispatch = useDispatch();
 
@@ -36,6 +37,11 @@ function TextInside() {
     dispatch(
       textInsideActions.changeWeight({ newWeightValue: e.target.value })
     );
+  };
+
+  const handleFontColourChange = (e) => {
+    setfontColour(e.target.value);
+    dispatch(textInsideActions.changeColour({ newColour: e.target.value }));
   };
 
   return (
@@ -102,7 +108,8 @@ function TextInside() {
           <input
             type="color"
             className={"colour-choice"}
-            defaultValue={"#f1404b"}
+            defaultValue={fontColour}
+            onChange={handleFontColourChange}
           ></input>
         </div>
       </div>
