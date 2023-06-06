@@ -66,4 +66,8 @@
   .paragraph {
     font-size: 30px;
   }
+
+  .bg-change-wrapper {
+    margin-top: 70px;
+  }
 }
