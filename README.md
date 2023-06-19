@@ -6,10 +6,15 @@ Advanced button generator to quickly make your button and copy it into your proj
   2. Redux toolkit
 
 # How to set up:
-Start the server:
+Install dependecies:
 ```bash
 cd .\button-generator\
 ```
+```bash
+npm install
+```
+
+Start the server:
 ```bash
 npm start
 ```
